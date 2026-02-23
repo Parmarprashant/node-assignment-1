@@ -78,43 +78,44 @@ const students = [
 
 
 
-app.get('/students', (req, res)=>{
-    
-    res.status(200).json(users);
+app.get('/students', (req, res) => {
+
+  res.status(200).json(students);
 })
 
-app.get('/students/topper',(req, res)=>{
-    try{
+app.get('/students/topper', (req, res) => {
+  try {
     var max = 0;
-    for(var i = 0; i< students.length; i++){
-        if(max < students[i].cgpa){
-            max = students[i];
-        }
+    for (var i = 0; i < students.length; i++) {
+      if (max < students[i].cgpa) {
+        max = students[i];
+      }
     }
     res.status(200).json(max);
-}
-catch(error){
+  }
+  catch (error) {
     res.status(500).json("data fetchinf failed");
-    }
+  }
 })
 
 
 
-app.get('/students/average', (req, res)=>{
-        var avg = 0;
-        var sum =0;
-        for(var i =0; i<students.length; i++){
-           sum = sum + students[i].cgpa;
-        }
-        avg = sum/students.length;
+app.get('/students/average', (req, res) => {
+  var avg = 0;
+  var sum = 0;
+  for (var i = 0; i < students.length; i++) {
+    sum = sum + students[i].cgpa;
+  }
+  avg = sum / students.length;
 
-        res.status(200).json(avg);
+  res.status(200).json(avg);
 })
 
 
-app.get('/students/count', (req, res)=>{
-    res.status(200).json({
-        totalStudent: `${students.length}`})
+app.get('/students/count', (req, res) => {
+  res.status(200).json({
+    totalStudent: `${students.length}`
+  })
 })
 
 app.get('/students/:id', (req, res) => {
@@ -130,26 +131,19 @@ app.get('/students/:id', (req, res) => {
 });
 
 
-app.get('/students/branch/:branchname', (req, res)=>{
-    const data = String(req.params.branchname);
-    // const ans = students.find(u => u.branch == data);
-    // if(ans){
-    //     res.send(ans);
-    // }
-    // else{
-    //     res.status(404).json("data not found")
-    // }
+app.get('/students/branch/:branchname', (req, res) => {
+  const data = String(req.params.branchname);
 
- var arr = [];
-    for(var i =0; i<students.length; i++){
-        if(students[i].branch === data){
-            arr.push(students[i]);
-        }
+  var arr = [];
+  for (var i = 0; i < students.length; i++) {
+    if (students[i].branch === data) {
+      arr.push(students[i]);
     }
+  }
 
-    res.status(200).json(arr);
+  res.status(200).json(arr);
 })
 
-app.listen("3000", (req,res)=>{
-    console.log("server is running on the port 3000");
-})
+app.listen("3000", () => {
+  console.log("server is running on the port 3000");
+});
