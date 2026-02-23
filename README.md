@@ -16,12 +16,12 @@ The objective of this project is to practice building a RESTful API using Node.j
 
 ## Sample API URLs
 
-- **Get all students**: `http://localhost:3000/students`
-- **Get student by ID**: `http://localhost:3000/students/1`
-- **Get student with highest CGPA**: `http://localhost:3000/students/topper`
-- **Get average CGPA**: `http://localhost:3000/students/average`
-- **Get total student count**: `http://localhost:3000/students/count`
-- **Get students in CSE branch**: `http://localhost:3000/students/branch/CSE`
+- **Get all students**: `https://node-assignment-1-dhkc.onrender.com/students`
+- **Get student by ID**: `https://node-assignment-1-dhkc.onrender.com/students/1`
+- **Get student with highest CGPA**: `https://node-assignment-1-dhkc.onrender.com/students/topper`
+- **Get average CGPA**: `https://node-assignment-1-dhkc.onrender.com/students/average`
+- **Get total student count**: `https://node-assignment-1-dhkc.onrender.com/students/count`
+- **Get students in CSE branch**: `https://node-assignment-1-dhkc.onrender.com/students/branch/CSE`
 
 ## Steps to Run Locally
 
@@ -50,4 +50,4 @@ The objective of this project is to practice building a RESTful API using Node.j
    The server will be running at `http://localhost:3000`.
 
 ## Deployed Link
-[Click here to view the deployed application](https://your-deployment-link.netlify.app/) *(Replace with actual link if available)*
+[Click here to view the deployed application](https://node-assignment-1-dhkc.onrender.com/)
