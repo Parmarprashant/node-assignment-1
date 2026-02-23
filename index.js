@@ -76,7 +76,9 @@ const students = [
   }
 ];
 
-
+app.get('/', (req, res) => {
+  res.send("Welcome to the Student Management API");
+})
 
 app.get('/students', (req, res) => {
 
